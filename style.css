@@ -39,12 +39,19 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+animation: hover 1s infinite alternate linear;
 }
 /* end header link animations */
 
+@keyframes hover {
+  to {
+    transform: translateY(-8px)
+  }
+}
 /* article link transitions */
-main a {
+main a:hover {
   color: var(--danger-color);
+  transform: translateY(-4px);
 }
 /* end article link transitions */
 
@@ -100,6 +107,22 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  animation: backflip 1s infinite linear;
+}
+
+@keyframes backflip {
+    8% {
+      transform: translateY(8px) rotateZ(0deg)
+    }
+    25% {
+      transform: translateY(-50%) rotateZ(-180deg)
+    }
+    50% {
+      transform: translateY(0px) rotateZ(-180deg)
+    }
+    100% {
+      transform: translateY(0px) rotateZ(-360deg)
+    }
 }
 
 main article {
